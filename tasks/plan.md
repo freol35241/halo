@@ -103,7 +103,7 @@ A task is not complete until it passes review.
 ## Phase 2: Frontend — Layout & Navigation
 
 ### Task 007 — App Shell & Sidebar
-**Status:** `[R]`
+**Status:** `[X]`
 **File:** `tasks/007-app-shell.md`
 **Summary:** Build the app shell with responsive sidebar, header, and main content area. Mobile overlay sidebar with swipe support. Use design tokens throughout. No API integration yet — use static mock data.
 **Acceptance Criteria:**

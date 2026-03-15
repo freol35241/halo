@@ -59,7 +59,7 @@ A task is not complete until it passes review.
 ## Phase 1: Container Management
 
 ### Task 004 — Docker Service
-**Status:** `[ ]`
+**Status:** `[R]`
 **File:** `tasks/004-docker-service.md`
 **Summary:** Create Dockerode wrapper service for container lifecycle management. Since we can't test with a real Docker daemon in CI, use a test double pattern: define a DockerService interface and provide both a real (Dockerode) and fake (in-memory) implementation. TDD against the interface.
 **Acceptance Criteria:**

@@ -1,6 +1,6 @@
 # Task 006 — template-service
 
-**Status:** `[R]`
+**Status:** `[X]`
 
 ## Requirements
 
@@ -33,3 +33,9 @@ Implemented built-in devcontainer template service and REST API following Red/Gr
 - `src/lib/server/templates/templates.test.ts` — 11 tests covering all template shapes, getTemplateById, and validateTemplate
 - `src/routes/api/templates/templates.test.ts` — 4 integration tests for the API route
 - All 132 tests pass, lint clean, type check clean, build successful
+
+## Review Result
+
+**APPROVED**
+
+Clean implementation. All four templates match design-vision.md section 6.1 (correct base images, tools, descriptions). Startup validation via module-load-time loop is a good pattern. Tests are thorough — cover all template shapes, lookup, validation success/failure paths, and API integration. Code is minimal and well-structured.

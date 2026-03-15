@@ -30,7 +30,7 @@ A task is not complete until it passes review.
 - `npm run build` produces a working production build
 
 ### Task 002 — Database Layer
-**Status:** `[R]`
+**Status:** `[X]`
 **File:** `tasks/002-database-layer.md`
 **Summary:** Set up better-sqlite3 with a migration system. Create initial schema for containers and sessions tables. Write migration runner. TDD: test migration execution, schema creation, basic CRUD operations.
 **Acceptance Criteria:**

@@ -87,12 +87,13 @@ This file is updated by the orchestrator loop to point to the active task.
 **Attempts:** $ATTEMPTS
 EOF
 
+        BUILD_LOG="tasks/logs/build-$(printf '%03d' "$TASK")-attempt-$((ATTEMPTS + 1))"
         claude -p "$(cat agents/build-prompt.md)" \
             --model sonnet \
             --output-format stream-json \
             --verbose \
             --allowedTools "Read,Write,Edit,Bash,Glob,Grep" \
-            2>&1 | tee "tasks/logs/build-$(printf '%03d' "$TASK")-attempt-$((ATTEMPTS + 1)).log" || true
+            2>&1 | tee "${BUILD_LOG}.jsonl" | agents/format-log.sh | tee "${BUILD_LOG}.log" || true
 
         # After build agent finishes, check if it marked the task as [R]
         if grep -q '\[R\]' "$TASK_FILE" 2>/dev/null; then
@@ -126,12 +127,13 @@ EOF
     elif [ "$PHASE" = "review" ]; then
         log "Launching REVIEW agent (opus)..."
 
+        REVIEW_LOG="tasks/logs/review-$(printf '%03d' "$TASK")-attempt-$((ATTEMPTS + 1))"
         claude -p "$(cat agents/review-prompt.md)" \
             --model opus \
             --output-format stream-json \
             --verbose \
             --allowedTools "Read,Write,Edit,Bash,Glob,Grep" \
-            2>&1 | tee "tasks/logs/review-$(printf '%03d' "$TASK")-attempt-$((ATTEMPTS + 1)).log" || true
+            2>&1 | tee "${REVIEW_LOG}.jsonl" | agents/format-log.sh | tee "${REVIEW_LOG}.log" || true
 
         # Check what the review agent decided
         if grep -q '\[X\]' "$TASK_FILE" 2>/dev/null; then

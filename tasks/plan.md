@@ -88,7 +88,7 @@ A task is not complete until it passes review.
 - Request validation on all inputs
 
 ### Task 006 — Template Service
-**Status:** `[ ]`
+**Status:** `[R]`
 **File:** `tasks/006-template-service.md`
 **Summary:** Implement built-in devcontainer templates (Rust, SvelteKit, Python ML, Blank) and template listing API. TDD.
 **Acceptance Criteria:**

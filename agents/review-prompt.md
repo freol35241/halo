@@ -66,6 +66,7 @@ Read these files to understand the project:
    - Set phase to `build`
    - Reset attempts to `0`
 4. Write a brief `## Review Result` section at the bottom of the task file: `APPROVED` + any minor notes.
+5. **Commit** all your changes before finishing. Use `git add` for all relevant files and commit with a message in the format `review: approve task NNN - <short description>`. All work MUST be committed.
 
 ### If REJECTED:
 
@@ -80,6 +81,7 @@ Read these files to understand the project:
    - Where it is (file + line)
    - What the fix should be
 5. Clear any previous `## Build Summary` section so the build agent starts fresh.
+6. **Commit** all your changes before finishing. Use `git add` for all relevant files and commit with a message in the format `review: reject task NNN - <short description>`. All work MUST be committed.
 
 ## Rules
 

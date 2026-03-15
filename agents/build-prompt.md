@@ -25,6 +25,7 @@ Read these files to understand the project:
 7. **Verify** type checking passes: `npm run check` (after task 001 is done)
 8. **Update** the task status in both the task file and `tasks/plan.md` from `[ ]` to `[R]` (ready for review).
 9. **Write** a brief summary of what you did at the bottom of the task file under a `## Build Summary` section.
+10. **Commit** all your changes before finishing. Use `git add` for all relevant files and commit with a message in the format `feat: implement task NNN - <short description>`. All work MUST be committed — do not leave uncommitted changes.
 
 ## Rules
 

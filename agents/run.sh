@@ -89,6 +89,8 @@ EOF
 
         claude -p "$(cat agents/build-prompt.md)" \
             --model sonnet \
+            --output-format stream-json \
+            --verbose \
             --allowedTools "Read,Write,Edit,Bash,Glob,Grep" \
             2>&1 | tee "tasks/logs/build-$(printf '%03d' "$TASK")-attempt-$((ATTEMPTS + 1)).log" || true
 
@@ -122,10 +124,12 @@ EOF
         fi
 
     elif [ "$PHASE" = "review" ]; then
-        log "Launching REVIEW agent (sonnet)..."
+        log "Launching REVIEW agent (opus)..."
 
         claude -p "$(cat agents/review-prompt.md)" \
-            --model sonnet \
+            --model opus \
+            --output-format stream-json \
+            --verbose \
             --allowedTools "Read,Write,Edit,Bash,Glob,Grep" \
             2>&1 | tee "tasks/logs/review-$(printf '%03d' "$TASK")-attempt-$((ATTEMPTS + 1)).log" || true
 

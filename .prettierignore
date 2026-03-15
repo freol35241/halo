@@ -1,0 +1,9 @@
+.svelte-kit
+build
+node_modules
+package-lock.json
+agents/
+tasks/
+design-vision.md
+README.md
+test-results/

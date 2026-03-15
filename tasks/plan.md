@@ -16,7 +16,7 @@ A task is not complete until it passes review.
 ## Phase 0: Foundation
 
 ### Task 001 — Project Scaffolding
-**Status:** `[ ]`
+**Status:** `[X]`
 **File:** `tasks/001-project-scaffolding.md`
 **Summary:** Initialize SvelteKit project with TypeScript strict mode, Vitest, Playwright, ESLint, Prettier. Create directory structure per CLAUDE.md. Add design tokens CSS. Verify `npm run dev`, `npm run test`, `npm run check`, and `npm run lint` all work.
 **Acceptance Criteria:**
@@ -30,7 +30,7 @@ A task is not complete until it passes review.
 - `npm run build` produces a working production build
 
 ### Task 002 — Database Layer
-**Status:** `[ ]`
+**Status:** `[R]`
 **File:** `tasks/002-database-layer.md`
 **Summary:** Set up better-sqlite3 with a migration system. Create initial schema for containers and sessions tables. Write migration runner. TDD: test migration execution, schema creation, basic CRUD operations.
 **Acceptance Criteria:**

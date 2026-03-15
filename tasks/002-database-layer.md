@@ -1,6 +1,6 @@
 # Task 002 — Database Layer
 
-**Status:** `[ ]`
+**Status:** `[R]`
 **Phase:** Foundation
 
 ## Objective
@@ -65,15 +65,27 @@ Set up better-sqlite3 with a migration system. Create initial schema for contain
 
 ## Acceptance Criteria
 
-- [ ] `better-sqlite3` installed and wrapped in typed service
-- [ ] Migration runner applies SQL files in order, tracks state, is idempotent
-- [ ] Initial migration creates all three tables with correct schema
-- [ ] Container CRUD: create, getById, getAll, update, delete
-- [ ] Session CRUD: create, getById, getAll (with container filter), update, delete
-- [ ] FeedEntry CRUD: create, getBySessionId (ordered by created_at), delete by session
-- [ ] All operations tested with in-memory SQLite (`:memory:`)
-- [ ] Database path configurable via env var
+- [x] `better-sqlite3` installed and wrapped in typed service
+- [x] Migration runner applies SQL files in order, tracks state, is idempotent
+- [x] Initial migration creates all three tables with correct schema
+- [x] Container CRUD: create, getById, getAll, update, delete
+- [x] Session CRUD: create, getById, getAll (with container filter), update, delete
+- [x] FeedEntry CRUD: create, getBySessionId (ordered by created_at), delete by session
+- [x] All operations tested with in-memory SQLite (`:memory:`)
+- [x] Database path configurable via env var
 
 ## Review Feedback
 
 _(populated by the review agent)_
+
+## Build Summary
+
+Implemented the full database layer using strict Red/Green TDD:
+
+- `src/lib/server/db/migrate.ts` — migration runner that reads `.sql` files alphabetically, tracks applied migrations in `_migrations` table, and wraps each migration in a transaction. Idempotent.
+- `src/lib/server/db/index.ts` — singleton `getDb()` / `closeDb()` service. Respects `HALO_DB_PATH` env var, enables WAL mode, auto-runs migrations on first connect.
+- `src/lib/server/db/containers.ts` — full CRUD with JSON config serialization/deserialization.
+- `src/lib/server/db/sessions.ts` — full CRUD with optional `container_id` filter on `getAll`.
+- `src/lib/server/db/feed-entries.ts` — create, get by session (ordered by `created_at`), delete by session. JSON metadata serialization.
+
+25 tests passing across 5 test files. All checks pass: `npm run test`, `npm run check`, `npm run lint`, `npm run build`.

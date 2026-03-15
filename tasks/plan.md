@@ -72,7 +72,7 @@ A task is not complete until it passes review.
 - No ports are published to host (network-only access)
 
 ### Task 005 — Container API Routes
-**Status:** `[R]`
+**Status:** `[X]`
 **File:** `tasks/005-container-api.md`
 **Summary:** Implement REST API routes for container CRUD. Wire up Docker service and database. TDD with fake Docker service.
 **Acceptance Criteria:**

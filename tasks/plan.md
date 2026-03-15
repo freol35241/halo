@@ -43,7 +43,7 @@ A task is not complete until it passes review.
 - Database file stored at configurable path (env var `HALO_DB_PATH`, default `./data/halo.db`)
 
 ### Task 003 — Shared Types & API Utilities
-**Status:** `[R]`
+**Status:** `[X]`
 **File:** `tasks/003-shared-types.md`
 **Summary:** Define TypeScript types for all domain entities (Container, Session, FeedEntry, Template). Create API response helpers and error handling utilities. TDD.
 **Acceptance Criteria:**

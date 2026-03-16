@@ -10,6 +10,7 @@ import { getContainerById } from '../db/containers.js';
 import { createFeedEntry, getFeedEntriesBySessionId } from '../db/feed-entries.js';
 import type { Session, SessionType } from '../../types/session.js';
 import type { FeedEntry, FeedRole } from '../../types/feed.js';
+import { emitFeedEntry } from './feed-emitter.js';
 
 export interface CreateSessionInput {
 	name: string;
@@ -110,7 +111,9 @@ export class SessionService {
 			role: 'human',
 			content
 		});
-		return toFeedEntry(entryRow);
+		const entry = toFeedEntry(entryRow);
+		emitFeedEntry(id, entry);
+		return entry;
 	}
 
 	async end(id: string): Promise<void> {

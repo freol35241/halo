@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap');
+    </style>
+    <clipPath id="rounded"><rect width="1200" height="640" rx="12"/></clipPath>
+  </defs>
+  <g clip-path="url(#rounded)">
+    <!-- Background -->
+    <rect width="1200" height="640" fill="#0f1117"/>
+    <!-- Sidebar (collapsed hint) -->
+    <rect width="260" height="640" fill="#161821"/>
+    <rect x="260" width="1" height="640" fill="#2a2d3a"/>
+    <!-- Sidebar header -->
+    <text x="24" y="40" font-family="DM Sans, sans-serif" font-size="16" font-weight="600" fill="#c49a6c" letter-spacing="0.1em">HALO</text>
+    <text x="24" y="80" font-family="DM Sans, sans-serif" font-size="11" font-weight="500" fill="#4e5164" letter-spacing="0.05em">SESSIONS</text>
+    <rect x="8" y="92" width="244" height="44" rx="6" fill="transparent"/>
+    <circle cx="28" cy="114" r="4" fill="#6bc77a"/>
+    <text x="42" y="108" font-family="DM Sans, sans-serif" font-size="13" font-weight="500" fill="#d4d4dc">auth-refactor</text>
+    <text x="42" y="124" font-family="DM Sans, sans-serif" font-size="11" fill="#7a7d8e">Claude · running</text>
+    <rect x="8" y="142" width="244" height="44" rx="6" fill="#232738"/>
+    <circle cx="28" cy="164" r="4" fill="#6bc77a"/>
+    <text x="42" y="158" font-family="DM Sans, sans-serif" font-size="13" font-weight="500" fill="#d4d4dc">api-tests</text>
+    <text x="42" y="174" font-family="DM Sans, sans-serif" font-size="11" fill="#7a7d8e">Terminal · running</text>
+    <text x="24" y="230" font-family="DM Sans, sans-serif" font-size="11" font-weight="500" fill="#4e5164" letter-spacing="0.05em">CONTAINERS</text>
+    <rect x="8" y="242" width="244" height="44" rx="6" fill="transparent"/>
+    <circle cx="28" cy="264" r="4" fill="#6bc77a"/>
+    <text x="42" y="258" font-family="DM Sans, sans-serif" font-size="13" font-weight="500" fill="#d4d4dc">maritime-rust</text>
+    <text x="42" y="274" font-family="DM Sans, sans-serif" font-size="11" fill="#7a7d8e">Rust Systems · running</text>
+    <!-- Main area: Terminal -->
+    <rect x="280" y="0" width="920" height="56" fill="#181b25"/>
+    <rect x="280" y="56" width="920" height="1" fill="#2a2d3a"/>
+    <text x="312" y="28" font-family="DM Sans, sans-serif" font-size="11" fill="#7a7d8e">←</text>
+    <text x="336" y="28" font-family="DM Sans, sans-serif" font-size="14" font-weight="600" fill="#d4d4dc">api-tests</text>
+    <rect x="336" y="35" width="60" height="18" rx="9" fill="#2e2218"/>
+    <text x="366" y="48" font-family="DM Sans, sans-serif" font-size="10" fill="#d6956b" text-anchor="middle">Terminal</text>
+    <rect x="404" y="35" width="56" height="18" rx="9" fill="#1a2e1e"/>
+    <text x="432" y="48" font-family="DM Sans, sans-serif" font-size="10" fill="#6bc77a" text-anchor="middle">running</text>
+    <!-- Terminal content -->
+    <rect x="280" y="57" width="920" height="583" fill="#0f1117"/>
+    <text x="300" y="90" font-family="JetBrains Mono, monospace" font-size="13" fill="#6bc77a">user@maritime-rust</text>
+    <text x="458" y="90" font-family="JetBrains Mono, monospace" font-size="13" fill="#6ba3d6">~/project</text>
+    <text x="555" y="90" font-family="JetBrains Mono, monospace" font-size="13" fill="#d4d4dc">$ cargo test</text>
+    <text x="300" y="116" font-family="JetBrains Mono, monospace" font-size="13" fill="#d4d4dc">   Compiling maritime v0.3.2 (/home/user/project)</text>
+    <text x="300" y="140" font-family="JetBrains Mono, monospace" font-size="13" fill="#d4d4dc">    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.21s</text>
+    <text x="300" y="164" font-family="JetBrains Mono, monospace" font-size="13" fill="#d4d4dc">     Running unittests src/lib.rs (target/debug/deps/maritime-a1b2c3d4)</text>
+    <text x="300" y="200" font-family="JetBrains Mono, monospace" font-size="13" fill="#d4d4dc">running 23 tests</text>
+    <text x="300" y="224" font-family="JetBrains Mono, monospace" font-size="13" fill="#6bc77a">test auth::jwt::test_token_creation ... ok</text>
+    <text x="300" y="248" font-family="JetBrains Mono, monospace" font-size="13" fill="#6bc77a">test auth::jwt::test_token_validation ... ok</text>
+    <text x="300" y="272" font-family="JetBrains Mono, monospace" font-size="13" fill="#6bc77a">test auth::jwt::test_expired_token ... ok</text>
+    <text x="300" y="296" font-family="JetBrains Mono, monospace" font-size="13" fill="#6bc77a">test auth::middleware::test_auth_required ... ok</text>
+    <text x="300" y="320" font-family="JetBrains Mono, monospace" font-size="13" fill="#6bc77a">test auth::middleware::test_public_routes ... ok</text>
+    <text x="300" y="344" font-family="JetBrains Mono, monospace" font-size="13" fill="#6bc77a">test api::handlers::test_create_session ... ok</text>
+    <text x="300" y="368" font-family="JetBrains Mono, monospace" font-size="13" fill="#6bc77a">test api::handlers::test_list_sessions ... ok</text>
+    <text x="300" y="392" font-family="JetBrains Mono, monospace" font-size="13" fill="#d66b6b">test api::handlers::test_delete_session ... FAILED</text>
+    <text x="300" y="416" font-family="JetBrains Mono, monospace" font-size="13" fill="#6bc77a">test db::migrations::test_schema_v2 ... ok</text>
+    <text x="300" y="440" font-family="JetBrains Mono, monospace" font-size="13" fill="#6bc77a">test db::queries::test_insert_session ... ok</text>
+    <text x="300" y="476" font-family="JetBrains Mono, monospace" font-size="13" fill="#d4d4dc">test result: </text>
+    <text x="410" y="476" font-family="JetBrains Mono, monospace" font-size="13" fill="#d66b6b">FAILED</text>
+    <text x="470" y="476" font-family="JetBrains Mono, monospace" font-size="13" fill="#d4d4dc">. 22 passed; 1 failed; 0 ignored; 0 measured</text>
+    <text x="300" y="512" font-family="JetBrains Mono, monospace" font-size="13" fill="#6bc77a">user@maritime-rust</text>
+    <text x="458" y="512" font-family="JetBrains Mono, monospace" font-size="13" fill="#6ba3d6">~/project</text>
+    <text x="555" y="512" font-family="JetBrains Mono, monospace" font-size="13" fill="#d4d4dc">$</text>
+    <!-- Cursor -->
+    <rect x="568" y="500" width="8" height="16" fill="#c49a6c" opacity="0.7">
+      <animate attributeName="opacity" values="0;0.7;0" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

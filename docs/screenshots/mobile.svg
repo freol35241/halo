@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap');
+    </style>
+    <clipPath id="phone"><rect width="390" height="844" rx="40"/></clipPath>
+  </defs>
+  <g clip-path="url(#phone)">
+    <!-- Phone frame -->
+    <rect width="390" height="844" rx="40" fill="#0f1117" stroke="#2a2d3a" stroke-width="2"/>
+    <!-- Status bar area -->
+    <rect x="0" y="0" width="390" height="54" fill="#0f1117"/>
+    <text x="30" y="36" font-family="DM Sans, sans-serif" font-size="14" font-weight="600" fill="#d4d4dc">9:41</text>
+    <text x="340" y="36" font-family="DM Sans, sans-serif" font-size="12" fill="#d4d4dc">87%</text>
+    <!-- App header -->
+    <rect x="0" y="54" width="390" height="52" fill="#181b25"/>
+    <rect x="0" y="106" width="390" height="1" fill="#2a2d3a"/>
+    <!-- Hamburger -->
+    <rect x="20" y="72" width="16" height="2" rx="1" fill="#7a7d8e"/>
+    <rect x="20" y="78" width="16" height="2" rx="1" fill="#7a7d8e"/>
+    <rect x="20" y="84" width="16" height="2" rx="1" fill="#7a7d8e"/>
+    <text x="52" y="84" font-family="DM Sans, sans-serif" font-size="14" font-weight="600" fill="#c49a6c" letter-spacing="0.1em">HALO</text>
+    <!-- Session header -->
+    <rect x="0" y="107" width="390" height="52" fill="#181b25"/>
+    <rect x="0" y="159" width="390" height="1" fill="#2a2d3a"/>
+    <text x="20" y="128" font-family="DM Sans, sans-serif" font-size="11" fill="#7a7d8e">←</text>
+    <text x="44" y="128" font-family="DM Sans, sans-serif" font-size="14" font-weight="600" fill="#d4d4dc">auth-refactor</text>
+    <rect x="44" y="134" width="48" height="16" rx="8" fill="#1a2638"/>
+    <text x="68" y="146" font-family="DM Sans, sans-serif" font-size="9" fill="#6ba3d6" text-anchor="middle">Claude</text>
+    <rect x="100" y="134" width="52" height="16" rx="8" fill="#1a2e1e"/>
+    <text x="126" y="146" font-family="DM Sans, sans-serif" font-size="9" fill="#6bc77a" text-anchor="middle">running</text>
+    <!-- Feed content -->
+    <!-- Human message -->
+    <rect x="16" y="172" width="358" height="52" rx="8" fill="#2a3548"/>
+    <text x="32" y="192" font-family="DM Sans, sans-serif" font-size="11" font-weight="500" fill="#c49a6c">You</text>
+    <text x="32" y="210" font-family="DM Sans, sans-serif" font-size="12" fill="#d4d4dc">Refactor auth middleware to use JWT</text>
+    <!-- Thinking block -->
+    <rect x="16" y="236" width="358" height="36" rx="8" fill="#1e2130"/>
+    <text x="32" y="258" font-family="DM Sans, sans-serif" font-size="11" font-weight="500" fill="#6ba3d6">Thinking</text>
+    <text x="92" y="258" font-family="DM Sans, sans-serif" font-size="11" fill="#7a7d8e" font-style="italic">Analyzing auth structure...</text>
+    <!-- Tool call -->
+    <rect x="16" y="284" width="358" height="56" rx="8" fill="#1e2130"/>
+    <text x="32" y="306" font-family="DM Sans, sans-serif" font-size="11" font-weight="500" fill="#d6956b">Read</text>
+    <text x="68" y="306" font-family="JetBrains Mono, monospace" font-size="11" fill="#7a7d8e">src/middleware/auth.ts</text>
+    <rect x="32" y="314" width="326" height="16" rx="4" fill="#1a1e2a"/>
+    <text x="42" y="326" font-family="JetBrains Mono, monospace" font-size="10" fill="#4e5164">148 lines read</text>
+    <!-- Claude response -->
+    <rect x="16" y="352" width="358" height="108" rx="8" fill="#1e2130"/>
+    <text x="32" y="374" font-family="DM Sans, sans-serif" font-size="11" font-weight="500" fill="#6ba3d6">Claude</text>
+    <text x="32" y="394" font-family="DM Sans, sans-serif" font-size="12" fill="#d4d4dc">I'll refactor the auth middleware. The</text>
+    <text x="32" y="412" font-family="DM Sans, sans-serif" font-size="12" fill="#d4d4dc">current implementation uses express-</text>
+    <text x="32" y="430" font-family="DM Sans, sans-serif" font-size="12" fill="#d4d4dc">session. Here's my plan:</text>
+    <text x="42" y="448" font-family="DM Sans, sans-serif" font-size="12" fill="#d4d4dc">1. Replace session auth with JWT</text>
+    <!-- Edit tool call -->
+    <rect x="16" y="472" width="358" height="72" rx="8" fill="#1e2130"/>
+    <text x="32" y="494" font-family="DM Sans, sans-serif" font-size="11" font-weight="500" fill="#d6956b">Edit</text>
+    <text x="68" y="494" font-family="JetBrains Mono, monospace" font-size="11" fill="#7a7d8e">src/middleware/auth.ts</text>
+    <rect x="32" y="504" width="326" height="30" rx="4" fill="#1a1e2a"/>
+    <text x="42" y="516" font-family="JetBrains Mono, monospace" font-size="10" fill="#d66b6b">- import session from 'express-session'</text>
+    <text x="42" y="530" font-family="JetBrains Mono, monospace" font-size="10" fill="#6bc77a">+ import { verifyToken } from '../jwt'</text>
+    <!-- Streaming dots -->
+    <circle cx="36" cy="568" r="3.5" fill="#6ba3d6" opacity="0.6">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="48" cy="568" r="3.5" fill="#6ba3d6" opacity="0.4">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="568" r="3.5" fill="#6ba3d6" opacity="0.2">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Quick commands -->
+    <rect x="0" y="716" width="390" height="1" fill="#2a2d3a"/>
+    <rect x="0" y="717" width="390" height="40" fill="#181b25"/>
+    <rect x="16" y="725" width="72" height="24" rx="12" fill="#1e2130" stroke="#2a2d3a" stroke-width="1"/>
+    <text x="52" y="741" font-family="JetBrains Mono, monospace" font-size="9" fill="#7a7d8e" text-anchor="middle">git status</text>
+    <rect x="96" y="725" width="100" height="24" rx="12" fill="#1e2130" stroke="#2a2d3a" stroke-width="1"/>
+    <text x="146" y="741" font-family="JetBrains Mono, monospace" font-size="9" fill="#7a7d8e" text-anchor="middle">git log --oneline</text>
+    <rect x="204" y="725" width="44" height="24" rx="12" fill="#1e2130" stroke="#2a2d3a" stroke-width="1"/>
+    <text x="226" y="741" font-family="JetBrains Mono, monospace" font-size="9" fill="#7a7d8e" text-anchor="middle">ls -la</text>
+    <!-- Input bar -->
+    <rect x="0" y="757" width="390" height="87" fill="#181b25"/>
+    <rect x="16" y="769" width="320" height="36" rx="8" fill="#1e2130" stroke="#2a2d3a" stroke-width="1"/>
+    <text x="32" y="792" font-family="DM Sans, sans-serif" font-size="12" fill="#4e5164">Message Claude...</text>
+    <rect x="344" y="771" width="32" height="32" rx="6" fill="#c49a6c" opacity="0.3"/>
+    <text x="360" y="792" font-family="DM Sans, sans-serif" font-size="14" fill="#0f1117" text-anchor="middle">↑</text>
+    <!-- Home indicator -->
+    <rect x="130" y="826" width="130" height="5" rx="2.5" fill="#2a2d3a"/>
+  </g>
+</svg>

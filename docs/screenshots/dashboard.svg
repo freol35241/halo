@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap');
+    </style>
+    <clipPath id="rounded"><rect width="1200" height="780" rx="12"/></clipPath>
+  </defs>
+  <g clip-path="url(#rounded)">
+    <!-- Background -->
+    <rect width="1200" height="780" fill="#0f1117"/>
+    <!-- Sidebar -->
+    <rect width="260" height="780" fill="#161821"/>
+    <rect x="260" width="1" height="780" fill="#2a2d3a"/>
+    <!-- Sidebar header -->
+    <text x="24" y="40" font-family="DM Sans, sans-serif" font-size="16" font-weight="600" fill="#c49a6c" letter-spacing="0.1em">HALO</text>
+    <!-- Section: Sessions -->
+    <text x="24" y="80" font-family="DM Sans, sans-serif" font-size="11" font-weight="500" fill="#4e5164" letter-spacing="0.05em">SESSIONS</text>
+    <!-- Session items -->
+    <rect x="8" y="92" width="244" height="44" rx="6" fill="#232738"/>
+    <circle cx="28" cy="114" r="4" fill="#6bc77a"/>
+    <text x="42" y="108" font-family="DM Sans, sans-serif" font-size="13" font-weight="500" fill="#d4d4dc">auth-refactor</text>
+    <text x="42" y="124" font-family="DM Sans, sans-serif" font-size="11" fill="#7a7d8e">Claude · running</text>
+    <rect x="8" y="142" width="244" height="44" rx="6" fill="transparent"/>
+    <circle cx="28" cy="164" r="4" fill="#6bc77a"/>
+    <text x="42" y="158" font-family="DM Sans, sans-serif" font-size="13" font-weight="500" fill="#d4d4dc">api-tests</text>
+    <text x="42" y="174" font-family="DM Sans, sans-serif" font-size="11" fill="#7a7d8e">Terminal · running</text>
+    <rect x="8" y="192" width="244" height="44" rx="6" fill="transparent"/>
+    <circle cx="28" cy="214" r="4" fill="#4e5164"/>
+    <text x="42" y="208" font-family="DM Sans, sans-serif" font-size="13" font-weight="500" fill="#7a7d8e">db-migration</text>
+    <text x="42" y="224" font-family="DM Sans, sans-serif" font-size="11" fill="#4e5164">Claude · stopped</text>
+    <!-- New session button -->
+    <rect x="8" y="248" width="244" height="36" rx="6" fill="transparent" stroke="#2a2d3a" stroke-width="1" stroke-dasharray="4 2"/>
+    <text x="130" y="271" font-family="DM Sans, sans-serif" font-size="12" fill="#7a7d8e" text-anchor="middle">+ New Session</text>
+    <!-- Section: Containers -->
+    <text x="24" y="320" font-family="DM Sans, sans-serif" font-size="11" font-weight="500" fill="#4e5164" letter-spacing="0.05em">CONTAINERS</text>
+    <rect x="8" y="332" width="244" height="44" rx="6" fill="transparent"/>
+    <circle cx="28" cy="354" r="4" fill="#6bc77a"/>
+    <text x="42" y="348" font-family="DM Sans, sans-serif" font-size="13" font-weight="500" fill="#d4d4dc">maritime-rust</text>
+    <text x="42" y="364" font-family="DM Sans, sans-serif" font-size="11" fill="#7a7d8e">Rust Systems · running</text>
+    <rect x="8" y="382" width="244" height="44" rx="6" fill="transparent"/>
+    <circle cx="28" cy="404" r="4" fill="#6bc77a"/>
+    <text x="42" y="398" font-family="DM Sans, sans-serif" font-size="13" font-weight="500" fill="#d4d4dc">halo-dev</text>
+    <text x="42" y="414" font-family="DM Sans, sans-serif" font-size="11" fill="#7a7d8e">SvelteKit Web · running</text>
+    <rect x="8" y="432" width="244" height="44" rx="6" fill="transparent"/>
+    <circle cx="28" cy="454" r="4" fill="#d66b6b"/>
+    <text x="42" y="448" font-family="DM Sans, sans-serif" font-size="13" font-weight="500" fill="#7a7d8e">ml-experiments</text>
+    <text x="42" y="464" font-family="DM Sans, sans-serif" font-size="11" fill="#4e5164">Python ML · exited</text>
+    <!-- New container button -->
+    <rect x="8" y="488" width="244" height="36" rx="6" fill="transparent" stroke="#2a2d3a" stroke-width="1" stroke-dasharray="4 2"/>
+    <text x="130" y="511" font-family="DM Sans, sans-serif" font-size="12" fill="#7a7d8e" text-anchor="middle">+ New Container</text>
+    <!-- Main content area - Session feed -->
+    <rect x="280" y="0" width="920" height="56" fill="#181b25"/>
+    <rect x="280" y="56" width="920" height="1" fill="#2a2d3a"/>
+    <!-- Session header -->
+    <text x="312" y="28" font-family="DM Sans, sans-serif" font-size="11" fill="#7a7d8e">←</text>
+    <text x="336" y="28" font-family="DM Sans, sans-serif" font-size="14" font-weight="600" fill="#d4d4dc">auth-refactor</text>
+    <rect x="336" y="35" width="48" height="18" rx="9" fill="#1a2638"/>
+    <text x="360" y="48" font-family="DM Sans, sans-serif" font-size="10" fill="#6ba3d6" text-anchor="middle">Claude</text>
+    <rect x="392" y="35" width="56" height="18" rx="9" fill="#1a2e1e"/>
+    <text x="420" y="48" font-family="DM Sans, sans-serif" font-size="10" fill="#6bc77a" text-anchor="middle">running</text>
+    <!-- VS Code button -->
+    <rect x="1100" y="14" width="80" height="28" rx="6" fill="transparent" stroke="#2a2d3a" stroke-width="1"/>
+    <text x="1140" y="33" font-family="DM Sans, sans-serif" font-size="12" fill="#7a7d8e" text-anchor="middle">VS Code</text>
+    <!-- Feed entries -->
+    <!-- Human message -->
+    <rect x="300" y="76" width="880" height="52" rx="8" fill="#2a3548"/>
+    <text x="320" y="96" font-family="DM Sans, sans-serif" font-size="11" font-weight="500" fill="#c49a6c">You</text>
+    <text x="320" y="114" font-family="DM Sans, sans-serif" font-size="13" fill="#d4d4dc">Refactor the auth middleware to use JWT tokens instead of session cookies</text>
+    <!-- Assistant thinking -->
+    <rect x="300" y="140" width="880" height="40" rx="8" fill="#1e2130"/>
+    <text x="320" y="158" font-family="DM Sans, sans-serif" font-size="11" font-weight="500" fill="#6ba3d6">Thinking</text>
+    <text x="380" y="158" font-family="DM Sans, sans-serif" font-size="12" fill="#7a7d8e" font-style="italic">Analyzing the current auth middleware structure...</text>
+    <!-- Tool call -->
+    <rect x="300" y="192" width="880" height="64" rx="8" fill="#1e2130"/>
+    <text x="320" y="214" font-family="DM Sans, sans-serif" font-size="11" font-weight="500" fill="#d6956b">Read</text>
+    <text x="356" y="214" font-family="JetBrains Mono, monospace" font-size="12" fill="#7a7d8e">src/middleware/auth.ts</text>
+    <rect x="320" y="226" width="840" height="20" rx="4" fill="#1a1e2a"/>
+    <text x="332" y="240" font-family="JetBrains Mono, monospace" font-size="11" fill="#4e5164">148 lines read</text>
+    <!-- Assistant response -->
+    <rect x="300" y="268" width="880" height="120" rx="8" fill="#1e2130"/>
+    <text x="320" y="290" font-family="DM Sans, sans-serif" font-size="11" font-weight="500" fill="#6ba3d6">Claude</text>
+    <text x="320" y="312" font-family="DM Sans, sans-serif" font-size="13" fill="#d4d4dc">I'll refactor the auth middleware. The current implementation uses express-session</text>
+    <text x="320" y="330" font-family="DM Sans, sans-serif" font-size="13" fill="#d4d4dc">with cookie storage. Here's my plan:</text>
+    <text x="336" y="352" font-family="DM Sans, sans-serif" font-size="13" fill="#d4d4dc">1. Replace session-based auth with JWT verification</text>
+    <text x="336" y="370" font-family="DM Sans, sans-serif" font-size="13" fill="#d4d4dc">2. Add token refresh endpoint at /api/auth/refresh</text>
+    <!-- Another tool call -->
+    <rect x="300" y="400" width="880" height="84" rx="8" fill="#1e2130"/>
+    <text x="320" y="422" font-family="DM Sans, sans-serif" font-size="11" font-weight="500" fill="#d6956b">Edit</text>
+    <text x="356" y="422" font-family="JetBrains Mono, monospace" font-size="12" fill="#7a7d8e">src/middleware/auth.ts</text>
+    <rect x="320" y="434" width="840" height="40" rx="4" fill="#1a1e2a"/>
+    <text x="332" y="450" font-family="JetBrains Mono, monospace" font-size="11" fill="#d66b6b">- import session from 'express-session';</text>
+    <text x="332" y="466" font-family="JetBrains Mono, monospace" font-size="11" fill="#6bc77a">+ import { verifyToken } from '../lib/jwt';</text>
+    <!-- Streaming indicator -->
+    <circle cx="320" cy="510" r="4" fill="#6ba3d6" opacity="0.6">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="334" cy="510" r="4" fill="#6ba3d6" opacity="0.4">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="348" cy="510" r="4" fill="#6ba3d6" opacity="0.2">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Quick commands -->
+    <rect x="280" y="680" width="920" height="44" fill="#181b25"/>
+    <rect x="280" y="680" width="920" height="1" fill="#2a2d3a"/>
+    <rect x="300" y="692" width="80" height="24" rx="12" fill="#1e2130" stroke="#2a2d3a" stroke-width="1"/>
+    <text x="340" y="708" font-family="JetBrains Mono, monospace" font-size="10" fill="#7a7d8e" text-anchor="middle">git status</text>
+    <rect x="392" y="692" width="120" height="24" rx="12" fill="#1e2130" stroke="#2a2d3a" stroke-width="1"/>
+    <text x="452" y="708" font-family="JetBrains Mono, monospace" font-size="10" fill="#7a7d8e" text-anchor="middle">git log --oneline -5</text>
+    <rect x="524" y="692" width="48" height="24" rx="12" fill="#1e2130" stroke="#2a2d3a" stroke-width="1"/>
+    <text x="548" y="708" font-family="JetBrains Mono, monospace" font-size="10" fill="#7a7d8e" text-anchor="middle">ls -la</text>
+    <!-- Input bar -->
+    <rect x="280" y="724" width="920" height="56" fill="#181b25"/>
+    <rect x="300" y="736" width="850" height="36" rx="8" fill="#1e2130" stroke="#2a2d3a" stroke-width="1"/>
+    <text x="320" y="759" font-family="DM Sans, sans-serif" font-size="13" fill="#4e5164">Message Claude...</text>
+    <rect x="1156" y="738" width="32" height="32" rx="6" fill="#c49a6c" opacity="0.3"/>
+    <text x="1172" y="759" font-family="DM Sans, sans-serif" font-size="14" fill="#0f1117" text-anchor="middle">↑</text>
+  </g>
+</svg>

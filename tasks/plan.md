@@ -205,7 +205,7 @@ A task is not complete until it passes review.
 ## Phase 4: New Session Flow & Integration
 
 ### Task 014 — New Session Modal
-**Status:** `[R]`
+**Status:** `[X]`
 **File:** `tasks/014-new-session-modal.md`
 **Summary:** Build the new session bottom sheet modal. Container selection, session type selection, name input. Wired to session API. Launching a session navigates to the feed view.
 **Acceptance Criteria:**

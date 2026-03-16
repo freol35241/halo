@@ -159,7 +159,7 @@ A task is not complete until it passes review.
 - All routes tested
 
 ### Task 011 — Session Feed UI
-**Status:** `[R]`
+**Status:** `[X]`
 **File:** `tasks/011-session-feed-ui.md`
 **Summary:** Build the session feed component with all entry types: human, assistant, tool, command, output, system. Thinking blocks (collapsible), tool blocks (collapsible with code), command blocks ($ prefix), output blocks (monospace). Input bar with chat/command mode.
 **Acceptance Criteria:**

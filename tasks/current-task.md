@@ -2,7 +2,7 @@
 
 This file is updated by the orchestrator loop to point to the active task.
 
-**Task:** 15
-**File:** tasks/015-session-routing.md
+**Task:** 16
+**File:** tasks/016-reverse-proxy.md
 **Phase:** build
 **Attempts:** 0

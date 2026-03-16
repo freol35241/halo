@@ -217,7 +217,7 @@ A task is not complete until it passes review.
 - E2E test: create session flow
 
 ### Task 015 — Session Routing & Navigation
-**Status:** `[R]`
+**Status:** `[X]`
 **File:** `tasks/015-session-routing.md`
 **Summary:** Wire up SvelteKit routing so clicking a session in the sidebar loads the session feed, and all navigation flows work correctly. URL-based routing for sessions and containers.
 **Acceptance Criteria:**

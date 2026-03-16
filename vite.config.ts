@@ -11,7 +11,7 @@ function copyMigrationsPlugin() {
 		name: 'copy-migrations',
 		closeBundle() {
 			const src = 'src/lib/server/db/migrations';
-			const dest = '.svelte-kit/output/server/chunks/migrations';
+			const dest = 'build/server/chunks/migrations';
 			if (!existsSync(src)) return;
 			mkdirSync(dest, { recursive: true });
 			for (const file of readdirSync(src)) {

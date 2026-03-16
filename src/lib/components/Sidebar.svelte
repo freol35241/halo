@@ -4,8 +4,10 @@
 	import ContainerItem from './ContainerItem.svelte';
 	import SessionItem from './SessionItem.svelte';
 	import NewContainerModal from './NewContainerModal.svelte';
+	import NewSessionModal from './NewSessionModal.svelte';
 
 	let showNewContainerModal = false;
+	let showNewSessionModal = false;
 
 	// Mock data — will be replaced with API integration in later tasks
 	const mockContainers: Container[] = [
@@ -51,7 +53,7 @@
 	];
 
 	function handleNewSession(): void {
-		// Placeholder — wired in a later task
+		showNewSessionModal = true;
 	}
 
 	function handleNewContainer(): void {
@@ -154,6 +156,7 @@
 </nav>
 
 <NewContainerModal open={showNewContainerModal} on:close={() => (showNewContainerModal = false)} />
+<NewSessionModal open={showNewSessionModal} on:close={() => (showNewSessionModal = false)} />
 
 <style>
 	/* Backdrop — mobile only, rendered via {#if} */

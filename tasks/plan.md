@@ -188,7 +188,7 @@ A task is not complete until it passes review.
 - Integration test: send input → receive SSE feed entry
 
 ### Task 013 — Terminal Sessions (WebSocket + PTY)
-**Status:** `[R]`
+**Status:** `[X]`
 **File:** `tasks/013-terminal-sessions.md`
 **Summary:** Implement WebSocket-based terminal sessions using xterm.js (frontend) and node-pty (backend). Terminal connects to a shell inside a project container via `docker exec`. Dual output: raw terminal via WebSocket + parsed feed entries.
 **Acceptance Criteria:**

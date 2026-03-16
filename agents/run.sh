@@ -25,7 +25,8 @@ warn() { echo -e "${YELLOW}[HALO]${NC} $1"; }
 error() { echo -e "${RED}[HALO]${NC} $1"; }
 
 get_current_task() {
-    grep '^**Task:**' tasks/current-task.md | sed 's/.*\*\* //'
+    # Strip leading zeros to avoid octal interpretation
+    grep '^**Task:**' tasks/current-task.md | sed 's/.*\*\* //' | sed 's/^0*//' | sed 's/^$/0/'
 }
 
 get_current_phase() {
@@ -33,7 +34,7 @@ get_current_phase() {
 }
 
 get_current_attempts() {
-    grep '^**Attempts:**' tasks/current-task.md | sed 's/.*\*\* //'
+    grep '^**Attempts:**' tasks/current-task.md | sed 's/.*\*\* //' | sed 's/^0*//' | sed 's/^$/0/'
 }
 
 log "=== HALO Dual-Agent Build System ==="

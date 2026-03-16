@@ -1,0 +1,11 @@
+**Task 001 — APPROVED**
+
+All acceptance criteria verified. Updated:
+- `tasks/001-project-scaffolding.md` → `[X]`
+- `tasks/plan.md` → task 001 marked `[X]`
+- `tasks/current-task.md` → now points to task 002 (Database Layer), phase: build, attempts: 0
+
+Three non-blocking notes logged in the Review Result:
+1. Missing `"types": ["vitest/globals"]` in tsconfig for future tests using globals
+2. E2E tests require system-level Playwright deps (`npx playwright install-deps`) — environment setup concern, not a code defect
+3. Minor Rollup warnings from Svelte 4/Kit 2 version alignment — cosmetic only

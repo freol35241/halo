@@ -1,0 +1,99 @@
+/* HALO Design Tokens */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+	/* --- Color Palette --- */
+
+	/* Backgrounds */
+	--color-bg: #0f1117;
+	--color-sidebar: #161821;
+	--color-sidebar-hover: #1c1f2e;
+	--color-sidebar-active: #232738;
+	--color-surface: #181b25;
+	--color-surface-raised: #1e2130;
+
+	/* Borders */
+	--color-border: #2a2d3a;
+
+	/* Text */
+	--color-text: #d4d4dc;
+	--color-text-muted: #7a7d8e;
+	--color-text-dim: #4e5164;
+
+	/* Accent */
+	--color-accent: #c49a6c;
+	--color-accent-dim: #8a6d4b;
+	--color-accent-bg: #2e2518;
+
+	/* Status: Green (running/active) */
+	--color-green: #6bc77a;
+	--color-green-dim: #2d4a32;
+	--color-green-bg: #1a2e1e;
+
+	/* Status: Blue (info/claude) */
+	--color-blue: #6ba3d6;
+	--color-blue-dim: #2a3d52;
+	--color-blue-bg: #1a2638;
+
+	/* Status: Orange (warning/terminal) */
+	--color-orange: #d6956b;
+	--color-orange-dim: #523d2a;
+	--color-orange-bg: #2e2218;
+
+	/* Status: Red (error/stopped) */
+	--color-red: #d66b6b;
+	--color-red-dim: #522a2a;
+	--color-red-bg: #2e1a1a;
+
+	/* Special */
+	--color-human: #2a3548;
+	--color-code: #1a1e2a;
+
+	/* --- Typography --- */
+	--font-sans: 'DM Sans', 'Helvetica Neue', sans-serif;
+	--font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+
+	/* --- Responsive Breakpoints --- */
+	--breakpoint-mobile: 640px;
+	--breakpoint-tablet: 1024px;
+	--breakpoint-desktop: 1280px;
+
+	/* --- Spacing --- */
+	--space-1: 4px;
+	--space-2: 8px;
+	--space-3: 12px;
+	--space-4: 16px;
+	--space-5: 20px;
+	--space-6: 24px;
+	--space-8: 32px;
+	--space-10: 40px;
+	--space-12: 48px;
+
+	/* --- Border Radius --- */
+	--radius-sm: 4px;
+	--radius-md: 6px;
+	--radius-lg: 8px;
+	--radius-xl: 12px;
+	--radius-full: 9999px;
+}
+
+/* --- Global Reset --- */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--color-bg);
+	color: var(--color-text);
+	font-family: var(--font-sans);
+	font-size: 14px;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

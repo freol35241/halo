@@ -1,0 +1,23 @@
+Task 001 is complete and marked ready for review. Here's what was built:
+
+**Files created:**
+- `package.json` — with `"type": "module"`, all dev dependencies
+- `svelte.config.js` — adapter-node + vitePreprocess
+- `vite.config.ts` — Vitest configured for jsdom, scanning `src/**/*.test.ts`
+- `tsconfig.json` — extends SvelteKit generated config, strict mode on
+- `eslint.config.js` — ESLint 9 flat config with TypeScript + Svelte plugins
+- `.prettierrc` / `.prettierignore` — Prettier with svelte plugin
+- `src/app.html`, `src/app.d.ts` — SvelteKit app shell
+- `src/routes/+layout.svelte` — imports design tokens
+- `src/routes/+page.svelte` — HALO landing page
+- `src/lib/styles/tokens.css` — full design token palette (all colors from design-vision.md, fonts, spacing, breakpoints)
+- `src/lib/placeholder.test.ts` — 2 passing Vitest tests
+- `e2e/app.test.ts` — Playwright tests for home page
+- `playwright.config.ts` — E2E config using preview server
+- Full directory structure per CLAUDE.md spec
+
+**All checks passing:**
+- `npm run test` ✓ (2 tests)
+- `npm run check` ✓ (0 errors, 0 warnings)
+- `npm run lint` ✓ (prettier + eslint clean)
+- `npm run build` ✓ (adapter-node production build)

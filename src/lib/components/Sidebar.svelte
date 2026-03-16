@@ -3,6 +3,9 @@
 	import { sidebarOpen, closeSidebar } from '$lib/stores/sidebar';
 	import ContainerItem from './ContainerItem.svelte';
 	import SessionItem from './SessionItem.svelte';
+	import NewContainerModal from './NewContainerModal.svelte';
+
+	let showNewContainerModal = false;
 
 	// Mock data — will be replaced with API integration in later tasks
 	const mockContainers: Container[] = [
@@ -52,7 +55,7 @@
 	}
 
 	function handleNewContainer(): void {
-		// Placeholder — wired in a later task
+		showNewContainerModal = true;
 	}
 </script>
 
@@ -149,6 +152,8 @@
 		</button>
 	</div>
 </nav>
+
+<NewContainerModal open={showNewContainerModal} on:close={() => (showNewContainerModal = false)} />
 
 <style>
 	/* Backdrop — mobile only, rendered via {#if} */

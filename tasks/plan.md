@@ -129,7 +129,7 @@ A task is not complete until it passes review.
 - Loading and error states handled
 
 ### Task 009 — New Container Modal
-**Status:** `[ ]`
+**Status:** `[R]`
 **File:** `tasks/009-new-container-modal.md`
 **Summary:** Build the two-step bottom sheet modal for creating containers. Step 1: template selection. Step 2: configuration (name, repo, CLAUDE.md, extensions, post-create command). Wired to API.
 **Acceptance Criteria:**

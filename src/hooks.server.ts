@@ -8,6 +8,11 @@ import {
 } from '$lib/server/proxy/reverse-proxy.js';
 import { getAllContainers } from '$lib/server/db/containers.js';
 import { getDb } from '$lib/server/db/index.js';
+import { startPushWatcher } from '$lib/server/push/push-watcher.js';
+import { getPushService } from '$lib/server/push/singleton.js';
+
+// Start push notification watcher once at server startup
+startPushWatcher(getPushService());
 
 // ---------------------------------------------------------------------------
 // Hop-by-hop headers must not be forwarded to/from the upstream

@@ -41,11 +41,13 @@
 		"vitest": "^1.0.0"
 	},
 	"dependencies": {
+		"@types/web-push": "^3.6.4",
 		"@xterm/addon-fit": "^0.11.0",
 		"@xterm/xterm": "^6.0.0",
 		"better-sqlite3": "^12.8.0",
 		"dockerode": "^4.0.9",
 		"node-pty": "^1.1.0",
+		"web-push": "^3.6.7",
 		"ws": "^8.19.0"
 	}
 }

@@ -273,7 +273,7 @@ A task is not complete until it passes review.
 - App icons generated (192x192, 512x512)
 
 ### Task 019 — Push Notifications
-**Status:** `[ ]`
+**Status:** `[R]`
 **File:** `tasks/019-push-notifications.md`
 **Summary:** Implement Web Push notifications for session events. Backend sends push on phase transitions, human-input-needed, failures, completion. Frontend subscribes to push and shows notification.
 **Acceptance Criteria:**

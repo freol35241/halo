@@ -42,8 +42,9 @@ describe('runMigrations', () => {
 
 	it('is idempotent — running twice does not throw or duplicate', () => {
 		runMigrations(db);
+		const rowsBefore = db.prepare('SELECT filename FROM _migrations').all();
 		expect(() => runMigrations(db)).not.toThrow();
-		const rows = db.prepare('SELECT filename FROM _migrations').all();
-		expect(rows.length).toBe(1);
+		const rowsAfter = db.prepare('SELECT filename FROM _migrations').all();
+		expect(rowsAfter.length).toBe(rowsBefore.length);
 	});
 });

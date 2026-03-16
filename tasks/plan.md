@@ -176,7 +176,7 @@ A task is not complete until it passes review.
 - Component tests for each entry type
 
 ### Task 012 — SSE Streaming
-**Status:** `[R]`
+**Status:** `[X]`
 **File:** `tasks/012-sse-streaming.md`
 **Summary:** Implement Server-Sent Events for real-time session feed updates. Backend emits events when new feed entries are created. Frontend subscribes and updates feed reactively. TDD.
 **Acceptance Criteria:**

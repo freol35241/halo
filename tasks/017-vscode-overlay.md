@@ -1,6 +1,6 @@
 # Task 017 — VS Code Overlay
 
-**Status:** `[R]`
+**Status:** `[X]`
 
 See tasks/plan.md for full description.
 
@@ -25,9 +25,11 @@ See tasks/plan.md for full description.
 - [x] VS Code button in session header and container header both trigger overlay
 - [x] E2E test: overlay opens and shows iframe
 
-## Review Feedback
+## Review Result
 
-_(populated by the review agent)_
+**APPROVED**
+
+Clean implementation. All acceptance criteria met. Good use of design tokens, proper accessibility attributes (`role="dialog"`, `aria-label`, `aria-hidden`), graceful degradation when container name is unavailable, and solid test coverage (unit + E2E).
 
 ## Build Summary
 

@@ -2,7 +2,7 @@
 
 This file is updated by the orchestrator loop to point to the active task.
 
-**Task:** 008
+**Task:** 8
 **File:** tasks/008-container-config.md
-**Phase:** build
-**Attempts:** 0
+**Phase:** review
+**Attempts:** 1

@@ -116,7 +116,7 @@ A task is not complete until it passes review.
 - Playwright E2E test: sidebar opens/closes on mobile viewport
 
 ### Task 008 — Container Config View
-**Status:** `[ ]`
+**Status:** `[R]`
 **File:** `tasks/008-container-config.md`
 **Summary:** Build the container detail/config view with four tabs (overview, devcontainer, env, ports). Wire up to container API. TDD for data fetching.
 **Acceptance Criteria:**

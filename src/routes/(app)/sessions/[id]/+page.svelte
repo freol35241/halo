@@ -9,11 +9,15 @@
 	import TerminalView from '$lib/components/TerminalView.svelte';
 	import StatusPill from '$lib/components/StatusPill.svelte';
 	import TypeBadge from '$lib/components/TypeBadge.svelte';
+	import VSCodeOverlay from '$lib/components/VSCodeOverlay.svelte';
 
 	export let data: PageData;
 
 	$: session = data.session;
 	$: initialEntries = data.feedEntries ?? [];
+	$: containerName = data.containerName ?? null;
+
+	let showVSCodeOverlay = false;
 
 	// Subscribe to SSE stream for live updates (non-terminal sessions)
 	let stream: SessionStream | null = null;
@@ -59,6 +63,10 @@
 	<title>{session ? `${session.name} — HALO` : 'Session — HALO'}</title>
 </svelte:head>
 
+{#if showVSCodeOverlay && containerName}
+	<VSCodeOverlay {containerName} onClose={() => (showVSCodeOverlay = false)} />
+{/if}
+
 {#if data.error}
 	<div class="error-state">
 		<a class="back-link" href="/" aria-label="Back to home">
@@ -101,6 +109,28 @@
 					<StatusPill status={session.status} />
 				</div>
 			</div>
+
+			{#if containerName}
+				<button
+					class="vscode-btn"
+					on:click={() => (showVSCodeOverlay = true)}
+					aria-label="Open VS Code"
+				>
+					<svg
+						width="14"
+						height="14"
+						viewBox="0 0 14 14"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+						aria-hidden="true"
+					>
+						<rect x="1" y="1" width="12" height="12" rx="2" />
+						<path d="M5 4l4 3-4 3" />
+					</svg>
+					VS Code
+				</button>
+			{/if}
 		</header>
 
 		<!-- Content area -->
@@ -176,6 +206,29 @@
 		display: flex;
 		align-items: center;
 		gap: var(--space-2);
+	}
+
+	.vscode-btn {
+		display: flex;
+		align-items: center;
+		gap: var(--space-1);
+		padding: var(--space-1) var(--space-3);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-md);
+		background: none;
+		color: var(--color-text-muted);
+		font-size: 12px;
+		font-family: var(--font-sans);
+		cursor: pointer;
+		flex-shrink: 0;
+		transition:
+			background-color 0.15s,
+			color 0.15s;
+	}
+
+	.vscode-btn:hover {
+		background-color: var(--color-sidebar-hover);
+		color: var(--color-text);
 	}
 
 	.terminal-wrapper {

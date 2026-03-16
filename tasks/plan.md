@@ -245,7 +245,7 @@ A task is not complete until it passes review.
 - Integration test with fake HTTP backend
 
 ### Task 017 — VS Code Overlay
-**Status:** `[ ]`
+**Status:** `[R]`
 **File:** `tasks/017-vscode-overlay.md`
 **Summary:** Build the full-screen VS Code overlay component. Iframe loading code-server URL, back button, "open in new tab" option, connection status indicator.
 **Acceptance Criteria:**

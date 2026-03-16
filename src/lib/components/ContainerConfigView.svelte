@@ -1,11 +1,13 @@
 <script lang="ts">
 	import type { Container } from '$lib/types/container.js';
 	import StatusPill from './StatusPill.svelte';
+	import VSCodeOverlay from './VSCodeOverlay.svelte';
 
 	export let container: Container;
 
 	type Tab = 'overview' | 'devcontainer' | 'env' | 'ports';
 	let activeTab: Tab = 'overview';
+	let showVSCodeOverlay = false;
 
 	// Env editing state
 	let newEnvKey = '';
@@ -118,7 +120,11 @@
 			<StatusPill status={container.status} />
 		</div>
 
-		<a href="/ide/{container.name}/" class="vscode-btn" target="_blank" rel="noopener">
+		<button
+			class="vscode-btn"
+			on:click={() => (showVSCodeOverlay = true)}
+			aria-label="Open VS Code"
+		>
 			<svg
 				width="14"
 				height="14"
@@ -132,7 +138,7 @@
 				<path d="M5 4l4 3-4 3" />
 			</svg>
 			VS Code
-		</a>
+		</button>
 	</header>
 
 	<!-- Tabs -->
@@ -341,6 +347,10 @@
 	</div>
 </div>
 
+{#if showVSCodeOverlay}
+	<VSCodeOverlay containerName={container.name} onClose={() => (showVSCodeOverlay = false)} />
+{/if}
+
 <style>
 	.container-config {
 		display: flex;
@@ -410,7 +420,8 @@
 		background: none;
 		color: var(--color-text-muted);
 		font-size: 12px;
-		text-decoration: none;
+		font-family: var(--font-sans);
+		cursor: pointer;
 		flex-shrink: 0;
 		transition:
 			background-color 0.15s,

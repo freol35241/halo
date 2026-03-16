@@ -146,7 +146,7 @@ A task is not complete until it passes review.
 ## Phase 3: Session System
 
 ### Task 010 — Session Service & API
-**Status:** `[ ]`
+**Status:** `[R]`
 **File:** `tasks/010-session-api.md`
 **Summary:** Implement session CRUD service and API routes. Sessions belong to containers. Include feed entry persistence. TDD.
 **Acceptance Criteria:**

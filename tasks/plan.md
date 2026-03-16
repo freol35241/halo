@@ -233,7 +233,7 @@ A task is not complete until it passes review.
 ## Phase 5: Reverse Proxy & IDE
 
 ### Task 016 — Reverse Proxy
-**Status:** `[ ]`
+**Status:** `[R]`
 **File:** `tasks/016-reverse-proxy.md`
 **Summary:** Implement SvelteKit server hooks for reverse proxying to container services. Route `/ide/<container>/` to code-server on port 8443 in the container. Route `/port/<container>/<port>/` to arbitrary ports. Uses `halo-net` Docker network for addressing.
 **Acceptance Criteria:**

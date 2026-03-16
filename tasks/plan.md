@@ -289,7 +289,7 @@ A task is not complete until it passes review.
 ## Phase 7: Deployment
 
 ### Task 020 — Dockerfile & Entrypoint
-**Status:** `[ ]`
+**Status:** `[R]`
 **File:** `tasks/020-dockerfile.md`
 **Summary:** Create production Dockerfile and entrypoint script per design-vision.md section 5. Tailscale integration, Docker CLI, halo-net setup, multi-stage build for small image.
 **Acceptance Criteria:**

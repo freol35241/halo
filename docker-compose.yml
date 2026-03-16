@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  halo:
+    build: .
+    container_name: halo
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - halo-data:/data
+    environment:
+      - TS_AUTHKEY=${TS_AUTHKEY:-}
+      - HALO_DB_PATH=/data/halo.db
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
+    # Port 3000 is NOT published to host — access is via Tailscale only.
+    # Uncomment below for local development without Tailscale:
+    # ports:
+    #   - "3000:3000"
+
+  # Local development variant — runs the dev server without Tailscale
+  halo-dev:
+    image: node:20-slim
+    container_name: halo-dev
+    working_dir: /app
+    command: npm run dev -- --host 0.0.0.0
+    ports:
+      - '5173:5173'
+    volumes:
+      - .:/app
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /app/node_modules
+    environment:
+      - HALO_DB_PATH=/app/data/halo.db
+    profiles:
+      - dev
+
+volumes:
+  halo-data:
+
+networks:
+  default:
+    name: halo-net
+    external: true

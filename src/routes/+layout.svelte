@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../lib/styles/tokens.css';
 	import Sidebar from '$lib/components/Sidebar.svelte';
+	import InstallPrompt from '$lib/components/InstallPrompt.svelte';
 	import { sidebarOpen, openSidebar } from '$lib/stores/sidebar';
 </script>
 
@@ -41,6 +42,8 @@
 		</main>
 	</div>
 </div>
+
+<InstallPrompt />
 
 <style>
 	.app-shell {

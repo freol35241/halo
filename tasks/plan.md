@@ -262,7 +262,7 @@ A task is not complete until it passes review.
 ## Phase 6: PWA & Notifications
 
 ### Task 018 — PWA Configuration
-**Status:** `[ ]`
+**Status:** `[R]`
 **File:** `tasks/018-pwa.md`
 **Summary:** Configure the SvelteKit app as a Progressive Web App. Manifest, service worker, icons, standalone display mode, home screen install prompt.
 **Acceptance Criteria:**

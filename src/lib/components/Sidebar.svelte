@@ -1,5 +1,9 @@
 <script lang="ts">
-	import type { Container, Session } from '$lib/types';
+	import { onMount } from 'svelte';
+	import { afterNavigate } from '$app/navigation';
+	import { page } from '$app/stores';
+	import type { Container } from '$lib/types';
+	import type { Session } from '$lib/types';
 	import { sidebarOpen, closeSidebar } from '$lib/stores/sidebar';
 	import ContainerItem from './ContainerItem.svelte';
 	import SessionItem from './SessionItem.svelte';
@@ -9,48 +13,25 @@
 	let showNewContainerModal = false;
 	let showNewSessionModal = false;
 
-	// Mock data — will be replaced with API integration in later tasks
-	const mockContainers: Container[] = [
-		{
-			id: 'c1',
-			name: 'maritime-rust',
-			templateId: 'rust',
-			status: 'running',
-			config: {},
-			createdAt: new Date().toISOString(),
-			updatedAt: new Date().toISOString()
-		},
-		{
-			id: 'c2',
-			name: 'sveltekit-web',
-			templateId: 'sveltekit',
-			status: 'stopped',
-			config: {},
-			createdAt: new Date().toISOString(),
-			updatedAt: new Date().toISOString()
-		}
-	];
+	let containers: Container[] = [];
+	let sessions: Session[] = [];
 
-	const mockSessions: Session[] = [
-		{
-			id: 's1',
-			name: 'Implement auth module',
-			type: 'claude',
-			containerId: 'c1',
-			status: 'running',
-			createdAt: new Date().toISOString(),
-			updatedAt: new Date().toISOString()
-		},
-		{
-			id: 's2',
-			name: 'Build shell',
-			type: 'terminal',
-			containerId: 'c1',
-			status: 'idle',
-			createdAt: new Date().toISOString(),
-			updatedAt: new Date().toISOString()
+	async function loadData(): Promise<void> {
+		try {
+			const [cRes, sRes] = await Promise.all([fetch('/api/containers'), fetch('/api/sessions')]);
+			if (cRes.ok) containers = (await cRes.json()) as Container[];
+			if (sRes.ok) sessions = (await sRes.json()) as Session[];
+		} catch {
+			// silently fail — sidebar still renders empty lists
 		}
-	];
+	}
+
+	onMount(loadData);
+	afterNavigate(loadData);
+
+	$: currentPath = $page.url.pathname;
+	$: activeContainerId = currentPath.startsWith('/containers/') ? currentPath.split('/')[2] : null;
+	$: activeSessionId = currentPath.startsWith('/sessions/') ? currentPath.split('/')[2] : null;
 
 	function handleNewSession(): void {
 		showNewSessionModal = true;
@@ -98,11 +79,14 @@
 			<span class="section-label">Containers</span>
 		</div>
 		<ul class="item-list" role="list">
-			{#each mockContainers as container (container.id)}
+			{#each containers as container (container.id)}
 				<li>
-					<ContainerItem {container} />
+					<ContainerItem {container} active={activeContainerId === container.id} />
 				</li>
 			{/each}
+			{#if containers.length === 0}
+				<li class="empty-item">No containers</li>
+			{/if}
 		</ul>
 	</section>
 
@@ -112,11 +96,14 @@
 			<span class="section-label">Sessions</span>
 		</div>
 		<ul class="item-list" role="list">
-			{#each mockSessions as session (session.id)}
+			{#each sessions as session (session.id)}
 				<li>
-					<SessionItem {session} />
+					<SessionItem {session} active={activeSessionId === session.id} />
 				</li>
 			{/each}
+			{#if sessions.length === 0}
+				<li class="empty-item">No sessions</li>
+			{/if}
 		</ul>
 	</section>
 
@@ -245,6 +232,14 @@
 		display: flex;
 		flex-direction: column;
 		gap: 2px;
+	}
+
+	.empty-item {
+		font-size: 12px;
+		color: var(--color-text-dim);
+		padding: var(--space-2) var(--space-3);
+		font-style: italic;
+		font-family: var(--font-sans);
 	}
 
 	/* Actions */

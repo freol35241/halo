@@ -6,10 +6,10 @@
 	export let active = false;
 </script>
 
-<button class="container-item" class:active on:click>
+<a class="container-item" class:active href="/containers/{container.id}">
 	<StatusDot status={container.status} />
 	<span class="container-name">{container.name}</span>
-</button>
+</a>
 
 <style>
 	.container-item {
@@ -26,6 +26,7 @@
 		border-radius: var(--radius-md);
 		font-family: var(--font-sans);
 		font-size: 13px;
+		text-decoration: none;
 		transition:
 			background-color 0.15s,
 			color 0.15s;

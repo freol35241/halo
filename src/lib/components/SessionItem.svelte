@@ -7,11 +7,11 @@
 	export let active = false;
 </script>
 
-<button class="session-item" class:active on:click>
+<a class="session-item" class:active href="/sessions/{session.id}">
 	<StatusDot status={session.status} />
 	<span class="session-name">{session.name}</span>
 	<TypeBadge type={session.type} />
-</button>
+</a>
 
 <style>
 	.session-item {
@@ -28,6 +28,7 @@
 		border-radius: var(--radius-md);
 		font-family: var(--font-sans);
 		font-size: 13px;
+		text-decoration: none;
 		transition:
 			background-color 0.15s,
 			color 0.15s;
